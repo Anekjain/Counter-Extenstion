@@ -1,0 +1,54 @@
+{
+    "name": "Amazon ADS Counter",
+    
+    "description": "Keep a Track of your processed utterances, Happy Transcription !",
+    
+    "version": "1.0",
+    
+    "author" : "Amazon ADS Team",
+    
+    "manifest_version": 2,
+    
+    "background": {
+      "scripts": ["background.js"]
+    },
+    
+    "permissions": ["storage", "activeTab", "scripting"],
+    
+    "browser_action": {
+      "default_popup": "index.html",
+      "default_icon": {
+        "16": "./icon/counter16.png",
+        "48": "./icon/counter48.png",
+        "128": "./icon/counter128.png"
+      },
+      "default_title": "Keep a track on your AHT by using this Counter.\nUse Alt+Down -> Increment \nAlt+Up -> Decrememnt \nReset Counter - Alt+0."
+    },
+
+    "icons": {
+      "16": "icon/counter16.png",
+      "48": "icon/counter48.png",
+      "128": "icon/counter128.png"
+    },
+    
+    "commands": {
+      "counter-incrementer": {
+        "suggested_key": {
+          "default": "Alt+Down"
+        },
+        "description": "Increments the count"
+      },
+      "counter-decrementer": {
+        "suggested_key": {
+          "default": "Alt+Up"
+        },
+        "description": "Decrements the count"
+      },
+      "reset-counter": {
+        "suggested_key": {
+          "default": "Alt+0"
+        },
+        "description": "Resets the count"
+      }
+  }
+}  
